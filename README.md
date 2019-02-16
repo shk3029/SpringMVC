@@ -86,18 +86,17 @@
       - BeanNameUrlHandlerMapping
     - HandlerAdapter
       - SimpleControllerHandlerAdapter
-      ~~~
-      @org.springframework.stereotype.Controller("/simple")
-      public class SimpleController implements Controller {
-
-         @Override
-         public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-             return new ModelAndView("/WEB-INF/simple.jsp");
-         }
-      }
-      ~~~
     - [핸들러 설명](https://springsource.tistory.com/3)
     - [핸들러 종류](http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:ptl:handlermapping)
+        ~~~
+          @org.springframework.stereotype.Controller("/simple")
+          public class SimpleController implements Controller {
+             @Override
+             public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+                 return new ModelAndView("/WEB-INF/simple.jsp");
+             }
+          }
+        ~~~
   - 9강 DispatcherServlet 동작 원리 - 3
     - ViewResolver
       - InternalResourceViewResolver
@@ -189,8 +188,7 @@
     - 스프링 MVC 구성 요소 직접 빈으로 등록
     - @Configuration을 사용한 자바 설정 파일에 직접 @Bean을 사용해서 등록하기
       ~~~
-      * 예제
-      * 핸들러
+      * 예제(핸들러)
       @Bean
       public HandlerMapping handlerMapping() {
           RequestMappingHandlerMapping handlerMapping = new RequestMappingHandlerMapping();
