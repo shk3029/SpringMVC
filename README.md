@@ -82,12 +82,12 @@
     - @RestController는 각 메소드에 @Responsebody를 써주는 기능
     
    - 8강 DispatcherServlet 동작 원리 - 2
-    - HandlerMapping
-      - BeanNameUrlHandlerMapping
-    - HandlerAdapter
-      - SimpleControllerHandlerAdapter
-    - [핸들러 설명](https://springsource.tistory.com/3)
-    - [핸들러 종류](http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:ptl:handlermapping)
+      - [핸들러 설명](https://springsource.tistory.com/3)
+      - [핸들러 종류](http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:ptl:handlermapping)
+      - HandlerMapping
+          - BeanNameUrlHandlerMapping
+      - HandlerAdapter
+          - SimpleControllerHandlerAdapter    
         ~~~
           @org.springframework.stereotype.Controller("/simple")
           public class SimpleController implements Controller {
@@ -96,7 +96,7 @@
                  return new ModelAndView("/WEB-INF/simple.jsp");
              }
           }
-        ~~~
+        ~~~  
   - 9강 DispatcherServlet 동작 원리 - 3
     - ViewResolver
       - InternalResourceViewResolver
