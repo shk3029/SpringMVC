@@ -1,5 +1,23 @@
-# SpringMVC 강의[백기선] (2019/2/3 ~)
+# SpringMVC [백기선 강의] (2019/2/3 ~)
 [문서자료](https://docs.google.com/document/d/1V05o1_ZxhHIuN2-zkwxcwIcKpJ7V_XrLaJTAXl9VA54/edit#heading=h.27bngx7yn4d7)
+
+- [1부. 스프링 MVC 동작원리](#part1)
+  - 1강 스프링 MVC 소개
+  - 2강 서블릿 소개
+  - 3강 서블릿 실습
+  - 4강 서블릿 리스너와 서블릿 필터
+  - 5강 스프링 IoC 컨테이너 연동
+  - 6강 스프링 MVC 연동
+  - 7강 DispatcherServlet 동작 원리 - 1
+  - 8강 DispatcherServlet 동작 원리 - 2
+  - 9강 DispatcherServlet 동작 원리 - 3
+  - 10강 스프링 MVC 구성 요소
+  - 11강 스프링 MVC 동작 원리 마무리
+- [2부. 스프링 MVC 설정](#part2)
+  - 12강 스프링 MVC 빈 설정
+  - 13강 
+
+## Part1
 ### 1부. 스프링 MVC 동작 원리
 - 1강 스프링 MVC 소개
   - MVC
@@ -183,6 +201,8 @@
         - 자바 애플리케이션에 내장 톰캣을 만들고 그 안에 DispatcherServlet을 등록한다
           - 스프링 부트 자동 설정이 자동으로 해줌
         - 스프링 부트의 주관에 따라 여러 인터페이스 구현체를 빈으로 등록한다
+        
+## Part2        
 ### 2부. 스프링 MVC 설정
   - 12강 스프링 MVC 빈 설정
     - 스프링 MVC 구성 요소 직접 빈으로 등록
