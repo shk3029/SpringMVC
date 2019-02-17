@@ -1,7 +1,7 @@
 # SpringMVC [백기선 강의] (2019/2/3 ~)
 [문서자료](https://docs.google.com/document/d/1V05o1_ZxhHIuN2-zkwxcwIcKpJ7V_XrLaJTAXl9VA54/edit#heading=h.27bngx7yn4d7)
 
-- [1부. 스프링 MVC 동작원리](#part1)
+- [1부 스프링 MVC 동작원리](#part1)
   - 1강 스프링 MVC 소개
   - 2강 서블릿 소개
   - 3강 서블릿 실습
@@ -13,12 +13,12 @@
   - 9강 DispatcherServlet 동작 원리 - 3
   - 10강 스프링 MVC 구성 요소
   - 11강 스프링 MVC 동작 원리 마무리
-- [2부. 스프링 MVC 설정](#part2)
+- [2부 스프링 MVC 설정](#part2)
   - 12강 스프링 MVC 빈 설정
   - 13강 
 
 ## Part1
-### 1부. 스프링 MVC 동작 원리
+### 1부 스프링 MVC 동작 원리
 - 1강 스프링 MVC 소개
   - MVC
     - M(모델), V(뷰), C(컨트롤러)
@@ -203,7 +203,7 @@
         - 스프링 부트의 주관에 따라 여러 인터페이스 구현체를 빈으로 등록한다
         
 ## Part2        
-### 2부. 스프링 MVC 설정
+### 2부 스프링 MVC 설정
   - 12강 스프링 MVC 빈 설정
     - 스프링 MVC 구성 요소 직접 빈으로 등록
     - @Configuration을 사용한 자바 설정 파일에 직접 @Bean을 사용해서 등록하기
