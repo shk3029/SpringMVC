@@ -217,9 +217,52 @@
           return handlerMapping;
       }
       ~~~
-  - 13강 Continue
+  - 13강 @EnableWebMvc
+    - 애노테이션 기반 스프링 MVC를 사용할 때 편리한 웹 MVC 기본 설정
+    - RequestMappingHandler의 order를 0으로 설정해서 먼저 찾음
+    - RequestMappingHandlerAdapter도 먼저 찾음
+    - 따라서 성능적으로 더 좋음
+    - interceptor 기본적으로 2개가 설정됨
+    - messageConverters는 6개가 기본적으로 설정됨
+    - 손쉽게 인터셉터를 추가할 수 있음
+    ~~~
+    @Configuration
+    @EnableWebMvc
+    public class WebConfig {
+    }
+    ~~~
+  - 14강 WebMvcConfigurer 인터페이스
+    - @EnableWebMvc가 제공하는 빈을 커스터마이징할 수 있는 기능을 제공하는 인터페이스
+    - 스프링부트에서도 더 추가적인 기능을 사용하고 싶다면 사용할 수 있음
+    ~~~
+      @Configuration
+      @EnableWebMvc
+      public class WebConfig implements WebMvcConfigurer {
+         @Override
+         public void configureViewResolvers(ViewResolverRegistry registry) {
+             registry.jsp("/WEB-INF/", ".jsp");
+         }
+      }
+        @Override
+        public void addFormatters(FormatterRegistry registry) {
+        }
 
-
+        @Override
+        public void addInterceptors(interceptorRegistry registry){
+        }
+    ~~~
+    - 이렇게 뷰리졸버를 설정하면 기존에 있던 뷰리졸버에 설정됨
+  - 15강 스프링 부트의 스프링 MVC 설정
+    - 스프링 부트의 “주관”이 적용된 자동 설정이 동작
+      - JSP 보다 Thymeleaf 선호
+      - JSON 지원
+      - 정적 리소스 지원 (+ 웰컴 페이지, 파비콘 등 지원)
+    - 스프링 MVC 커스터마이징
+      - application.properties
+      - @Configuration + Implements WebMvcConfigurer: 스프링 부트의 스프링 MVC 자동설정 + 추가 설정
+      - @Configuration + @EnableWebMvc + Implements WebMvcConfigurer: 스프링 부트의 스프링 MVC 자동설정 사용하지 않음
+      - WebMvcConfigurer 클래스를 공부해두면 좋음
+      
 
 
 
